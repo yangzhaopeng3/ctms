@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity" xmlns="http://javafx.com/javafx/8"
+            fx:controller="mainactivity.boxoffice.BoxofficeController">
+    <children>
+        <ScrollPane fx:id="scrollpane" layoutY="44.0" prefHeight="616.0" prefWidth="857.0" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="44.0">
+            <content>
+                <TableView fx:id="tbview" prefHeight="584.0" prefWidth="957.0">
+                    <columns>
+                        <TableColumn fx:id="colFilmNo" prefWidth="140.0" style="-fx-alignment:CENTER" text="影片编号"/>
+                        <TableColumn fx:id="colFilmName" minWidth="0.0" prefWidth="149.0" style="-fx-alignment:CENTER"
+                                     text="影片名称"/>
+                        <TableColumn fx:id="colShowTime" minWidth="0.0" prefWidth="194.0" style="-fx-alignment:CENTER"
+                                     text="放映时间"/>
+                        <TableColumn fx:id="colShowHall" minWidth="0.0" prefWidth="119.0" style="-fx-alignment:CENTER"
+                                     text="放映影厅"/>
+                        <TableColumn fx:id="colTicketNum" prefWidth="145.0" style="-fx-alignment:CENTER" text="售票数"/>
+                        <TableColumn fx:id="colBoxoffice" prefWidth="202.0" style="-fx-alignment:CENTER" text="场次票房"/>
+                    </columns>
+                </TableView>
+            </content>
+        </ScrollPane>
+        <ToolBar fx:id="menuBar" prefHeight="44.0" prefWidth="957.0" AnchorPane.leftAnchor="0.0"
+                 AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <Button fx:id="btn_add" mnemonicParsing="false" onAction="#add" prefHeight="30.0" prefWidth="100.0"
+                        text="新增数据"/>
+                <Button fx:id="btn_delete" mnemonicParsing="false" prefWidth="100.0" text="删除数据"/>
+                <Button fx:id="btn_alter" layoutX="505.0" layoutY="10.0" mnemonicParsing="false" prefWidth="100.0"
+                        text="修改数据"/>
+                <TextField fx:id="tf_queryInput" prefHeight="30.0" prefWidth="280.0" promptText="请输入要查询的电影名称或影片编码"/>
+                <Button fx:id="btn_query" mnemonicParsing="false" onAction="#query" prefWidth="100.0" text="查询票房"/>
+            </items>
+        </ToolBar>
+    </children>
+</AnchorPane>

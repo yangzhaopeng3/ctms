@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity" xmlns="http://javafx.com/javafx/8"
+            fx:controller="mainactivity.hall.HallController">
+    <children>
+        <ScrollPane fx:id="scrollpane" layoutY="44.0" prefHeight="616.0" prefWidth="857.0" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="44.0">
+            <content>
+                <TableView fx:id="tbview" prefHeight="584.0" prefWidth="957.0">
+                    <columns>
+                        <TableColumn fx:id="colHallNo" prefWidth="140.0" style="-fx-alignment:CENTER" text="影厅编号"/>
+                        <TableColumn fx:id="colSeatNum" minWidth="0.0" prefWidth="149.0" style="-fx-alignment:CENTER"
+                                     text="座位数"/>
+                        <TableColumn fx:id="colIsWork" minWidth="0.0" prefWidth="194.0" style="-fx-alignment:CENTER"
+                                     text="正常工作"/>
+                    </columns>
+                </TableView>
+            </content>
+        </ScrollPane>
+        <ToolBar fx:id="menuBar" prefHeight="44.0" prefWidth="957.0" AnchorPane.leftAnchor="0.0"
+                 AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <Button fx:id="btn_alter" layoutX="505.0" layoutY="10.0" mnemonicParsing="false" prefWidth="100.0"
+                        text="修改数据"/>
+            </items>
+        </ToolBar>
+    </children>
+</AnchorPane>

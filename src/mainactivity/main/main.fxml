@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8" fx:controller="mainactivity.main.MainController">
+    <children>
+        <BorderPane prefHeight="513.0" prefWidth="988.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <Pane prefHeight="356.0" prefWidth="155.0" style="-fx-border-color: #F4F4F4 #b5b5b5 #F4F4F4 #F4F4F4;"
+                      BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="btn_main_filmlib" layoutX="17.0" layoutY="14.0" mnemonicParsing="false"
+                                onAction="#goToFilmlib" prefHeight="30.0" prefWidth="122.0" text="影片库"/>
+                        <Button fx:id="btn_main_schedule" layoutX="17.0" layoutY="60.0" mnemonicParsing="false"
+                                onAction="#goToSchedule" prefWidth="122.0" text="排片管理"/>
+                        <Button fx:id="btn_main_boxoffice" layoutX="17.0" layoutY="106.0" mnemonicParsing="false"
+                                onAction="#goToBoxoffice" prefWidth="122.0" text="票房管理"/>
+                        <Button fx:id="btn_main_hall" layoutX="17.0" layoutY="148.0" mnemonicParsing="false"
+                                onAction="#goToHall" prefWidth="122.0" text="影厅管理"/>
+                    </children>
+                </Pane>
+            </left>
+            <top>
+                <AnchorPane prefHeight="44.0" prefWidth="988.0"
+                            style="-fx-border-color: #F4F4F4  #F4F4F4 #b5b5b5 #F4F4F4;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label fx:id="lb_main_info" layoutX="14.0" layoutY="12.0" prefHeight="20.0" prefWidth="483.0"
+                               text="initializing..." AnchorPane.leftAnchor="14.0"/>
+                        <ImageView fx:id="iv_main_back" fitHeight="20.0" fitWidth="20.0" layoutX="954.0" layoutY="12.0"
+                                   onMouseClicked="#back" pickOnBounds="true" preserveRatio="true"
+                                   AnchorPane.rightAnchor="14.0">
+                            <image>
+                                <Image url="@../../../image/baseline_exit_to_app_black_18dp.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </top>
+            <center>
+                <AnchorPane fx:id="rightPane" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0"
+                            AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" BorderPane.alignment="CENTER"/>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
